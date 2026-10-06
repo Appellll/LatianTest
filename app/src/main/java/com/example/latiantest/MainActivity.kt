@@ -29,5 +29,14 @@ class MainActivity : AppCompatActivity() {
             }
             startActivity(_emailintent)
         }
+
+        val _phone = findViewById<TextView>(R.id.phone)
+
+        _phone.setOnClickListener {
+            val _phoneintent = Intent (Intent.ACTION_DIAL).apply {
+                data = Uri.parse("tel:+62 991 9110")
+            }
+            startActivity(_phoneintent)
+        }
     }
 }
