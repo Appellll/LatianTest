@@ -24,11 +24,22 @@ class MainActivity2 : AppCompatActivity() {
         val _guest = findViewById<Button>(R.id.guest)
 
         _admin.setOnClickListener {
-
+            val pilihintent = Intent()
+            pilihintent.putExtra("role","Admin")
+            setResult(RESULT_OK, pilihintent)
+            finish()
         }
-    }
-    fun pilihRole(role : String){
-        val intent = Intent()
-        intent.putExtra("role",role)
+        _user.setOnClickListener {
+            val pilihintent = Intent()
+            pilihintent.putExtra("role","User")
+            setResult(RESULT_OK, pilihintent)
+            finish()
+        }
+        _guest.setOnClickListener {
+            val pilihintent = Intent()
+            pilihintent.putExtra("role","Guest")
+            setResult(RESULT_OK, pilihintent)
+            finish()
+        }
     }
 }

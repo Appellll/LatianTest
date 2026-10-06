@@ -5,6 +5,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContract
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -37,6 +39,23 @@ class MainActivity : AppCompatActivity() {
                 data = Uri.parse("tel:+62 991 9110")
             }
             startActivity(_phoneintent)
+        }
+        val _role = findViewById<TextView>(R.id.role)
+        val _roleGanti = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ){
+            result ->
+            if (result.resultCode == RESULT_OK){
+                val _rolePilih = result.data?.getStringExtra("role")
+
+                _role.text = _rolePilih
+            }
+        }
+
+        _role.setOnClickListener {
+            val _roleintent = Intent(
+                this@MainActivity, MainActivity2::class.java)
+            _roleGanti.launch(_roleintent)
         }
     }
 }
