@@ -38,7 +38,9 @@
             android:layout_height="80dp"
             android:background="@drawable/shape_profile"
             android:src="@drawable/propil"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -68,7 +70,7 @@
         android:orientation="vertical"
         android:background="@drawable/rounded_card"
         android:id="@+id/acc_info"
-        android:padding="15dp"
+        android:padding="10dp"
         android:layout_marginTop="15dp">
 
         <TextView
@@ -89,8 +91,11 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:background="@drawable/shape_profile"
                 android:src="@drawable/propil"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -127,7 +132,10 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/propil"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:background="@drawable/shape_profile"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -164,7 +172,10 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/propil"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:background="@drawable/shape_profile"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -200,7 +211,10 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/propil"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:background="@drawable/shape_profile"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
